@@ -1,0 +1,65 @@
+
+
+
+
+
+#resolution{
+    height: 40px;
+    position: fixed;
+    top : 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: grey;
+    opacity: 50%;
+
+}
+#resolution:after{
+    content: "xs < 576";
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #resolution{
+        background: chartreuse;
+    }
+    #resolution:after{
+        content: " 0 > sm < 576";
+    }
+ }
+
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+    #resolution{
+        background: rgb(0, 92, 148);
+    }
+    #resolution:after{
+        content: " 576 > md < 768";
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #resolution{
+        background: rgb(199, 46, 0);
+    }
+    #resolution:after{
+        content: " 768 > lg < 992 ";
+    }
+
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    #resolution{
+        background: rgb(223, 223, 223);
+    }
+    #resolution:after{
+        content: " 992 > xl < 1200 ";
+    }
+ }

@@ -1,0 +1,54 @@
+#resolution {
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: grey;
+  opacity: 50%;
+}
+
+#resolution:after {
+  content: "xs < 576";
+}
+
+@media (min-width: 576px) {
+  #resolution {
+    background: chartreuse;
+  }
+
+  #resolution:after {
+    content: " 0 > sm < 576";
+  }
+}
+@media (min-width: 768px) {
+  #resolution {
+    background: #005c94;
+  }
+
+  #resolution:after {
+    content: " 576 > md < 768";
+  }
+}
+@media (min-width: 992px) {
+  #resolution {
+    background: #c72e00;
+  }
+
+  #resolution:after {
+    content: " 768 > lg < 992 ";
+  }
+}
+@media (min-width: 1200px) {
+  #resolution {
+    background: #dfdfdf;
+  }
+
+  #resolution:after {
+    content: " 992 > xl < 1200 ";
+  }
+}
+body {
+  background: #010030;
+}
